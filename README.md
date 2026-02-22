@@ -16,6 +16,6 @@
 
 **Tech Stack**: Node.js • Docker • GitHub Actions • AWS EC2 Free Tier
 
-**Live Demo**: http://3.110.30.107:3000/health
+**Live Demo**: http://43.205.241.27:3000/health
 
 
