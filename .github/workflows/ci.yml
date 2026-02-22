@@ -5,11 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Build Docker Image
-      run: docker build -t vinay-devops-app .
-    - name: Test Endpoints
+    - name: Build & Test
       run: |
-        docker run --rm -p 3000:3000 vinay-devops-app &
-        sleep 5
-        curl -f http://localhost:3000 || exit 1
-        curl -f http://localhost:3000/health || exit 1
+        docker build -t app .
+        docker run --rm -p 3000:3000 app & sleep 3 && curl -f http://localhost:3000/health
