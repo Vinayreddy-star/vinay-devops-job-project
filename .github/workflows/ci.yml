@@ -1,11 +1,16 @@
-name: Docker CI/CD
+name: Docker CI/CD Pipeline
 on: [push, pull_request]
 jobs:
-  build-test:
+  test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Build & Test
+    - name: Build Docker Image
+      run: docker build -t vinay-devops-app .
+    - name: Test App Endpoints
       run: |
-        docker build -t app .
-        docker run --rm -p 3000:3000 app & sleep 3 && curl -f http://localhost:3000/health
+        docker run -d -p 3000:3000 --name test-app vinay-devops-app
+        sleep 3
+        curl -f http://localhost:3000 || exit 1
+        curl -f http://localhost:3000/health || exit 1
+        docker stop test-app
