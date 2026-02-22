@@ -1,14 +1,12 @@
-# Vinay DevOps Project\nDockerized Node.js on AWS EC2. curl :3000 → Live!
+# 🚀 Vinay DevOps Job Project
 
-## 🚀 Live Demo
-| Feature | Screenshot |
-|---------|------------|
-| Docker Container | ![docker-ps](screenshots/docker-ps.png) |
-| App Live | ![app-live](screenshots/docker-ps.png) |
-| CI/CD Success | ![ci-cd](screenshots/ci-cd.png) |
+[![CI/CD](https://github.com/Vinayreddy-star/vinay-devops-job-project/workflows/Docker%20CI/badge.svg)](https://github.com/Vinayreddy-star/vinay-devops-job-project/actions)
+
+## 📸 Proof of Work
+
+| Docker Container | GitHub Actions CI | App Live |
+|------------------|-------------------|----------|
+| ![docker](Screenshot 2026-02-22 124611.png) | ![ci](Screenshot 2026-02-22 124432.png) | ![json](Screenshot 2026-02-22 124455.png) |
 
 ## Endpoints
-- `GET /` → JSON message
-- `GET /health` → Status + timestamp
 
-Repo: github.com/Vinayreddy-star/vinay-devops-job-project
